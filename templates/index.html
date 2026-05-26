@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README Auto-Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <span>README Auto</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="/dashboard" class="btn-primary">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-slide-down">
+                Generate Professional READMEs in Seconds
+            </h1>
+            <p class="hero-subtitle animate-fade-in">
+                Powered by AI. Easy to use. Beautiful results.
+            </p>
+            <a href="/dashboard" class="btn btn-large animate-pop">
+                Start Generating
+            </a>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card">📝</div>
+            <div class="floating-card card-2">🤖</div>
+            <div class="floating-card card-3">✨</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Why Choose README Auto?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Generate professional READMEs in seconds, not hours</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Powered</h3>
+                <p>Powered by advanced AI for quality content</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful Format</h3>
+                <p>Professional markdown formatting out of the box</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Easy Integration</h3>
+                <p>Copy or download your README instantly</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Customizable</h3>
+                <p>Edit any section to match your needs</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Smart Suggestions</h3>
+                <p>Intelligent recommendations for better docs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Fill Your Details</h3>
+                <p>Enter your project name, description, and features</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Upload Project</h3>
+                <p>Upload your project files for structure analysis</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Generate with AI</h3>
+                <p>Our AI creates a professional README</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Download & Use</h3>
+                <p>Download the markdown file and add to your repo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 README Auto-Generator. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

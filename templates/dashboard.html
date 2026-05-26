@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - README Auto-Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+</head>
+<body class="dashboard-body">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <span>README Auto</span>
+            </div>
+            <a href="/" class="btn-secondary">Back Home</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Left Panel - Input Form -->
+        <div class="input-panel">
+            <h2>Create Your README</h2>
+            
+            <form id="readmeForm">
+                <!-- Project Name -->
+                <div class="form-group">
+                    <label for="projectName">Project Name *</label>
+                    <input type="text" id="projectName" placeholder="My Awesome Project" required>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" placeholder="Brief description of your project" rows="3" required></textarea>
+                </div>
+
+                <!-- Features -->
+                <div class="form-group">
+                    <label for="features">Features</label>
+                    <div class="features-input">
+                        <input type="text" id="featureInput" placeholder="Add a feature and press Enter">
+                        <button type="button" class="btn-add" onclick="addFeature()">Add</button>
+                    </div>
+                    <div id="featuresList" class="features-list"></div>
+                </div>
+
+                <!-- Installation Steps -->
+                <div class="form-group">
+                    <label for="installation">Installation Steps</label>
+                    <div class="steps-input">
+                        <input type="text" id="stepInput" placeholder="Add installation step and press Enter">
+                        <button type="button" class="btn-add" onclick="addStep()">Add</button>
+                    </div>
+                    <div id="stepsList" class="steps-list"></div>
+                </div>
+
+                <!-- Project Upload -->
+                <div class="form-group">
+                    <label for="projectUpload">Upload Project (Optional)</label>
+                    <div class="file-upload">
+                        <input type="file" id="projectUpload" accept=".zip,.tar,.gz">
+                        <span>Click to upload or drag and drop</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Generate README
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Panel - Preview -->
+        <div class="preview-panel">
+            <div class="preview-header">
+                <h2>Preview</h2>
+                <div class="preview-actions">
+                    <button class="btn btn-small btn-secondary" onclick="copyToClipboard()">
+                        📋 Copy
+                    </button>
+                    <button class="btn btn-small btn-primary" onclick="downloadReadme()">
+                        ⬇️ Download
+                    </button>
+                </div>
+            </div>
+            <div id="preview" class="preview-content">
+                <div class="preview-placeholder">
+                    <p>Your README preview will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/markdown_preview.js') }}"></script>
+</body>
+</html>
